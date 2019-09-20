@@ -9,13 +9,13 @@
 import UIKit
 
 @IBDesignable
-public class XIBView: UIView {
+open class XIBView: UIView {
     
     private var contentView:UIView?
     
     @IBInspectable public var nibName:String?
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         xibSetup()
     }
@@ -38,7 +38,7 @@ public class XIBView: UIView {
             options: nil).first as? UIView
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         xibSetup()
         contentView?.prepareForInterfaceBuilder()
