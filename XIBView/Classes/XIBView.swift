@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import AsyncImageView
 
 @IBDesignable
-class XIBView: UIView {
+public class XIBView: UIView {
     
     private var contentView:UIView?
     
-    @IBInspectable var nibName:String?
+    @IBInspectable public var nibName:String?
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         xibSetup()
     }
@@ -39,7 +38,7 @@ class XIBView: UIView {
             options: nil).first as? UIView
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         xibSetup()
         contentView?.prepareForInterfaceBuilder()
